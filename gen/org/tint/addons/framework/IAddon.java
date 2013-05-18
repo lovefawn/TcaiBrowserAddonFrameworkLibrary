@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: /home/lovefawn/Develop/mobile/git/TcaiBrowserAddonFrameworkLibrary-master/src/org/tint/addons/framework/IAddon.aidl
+ * Original file: /home/lovefawn/Develop/mobile/git/TcaiBrowserAddonFrameworkLibrary/src/org/tint/addons/framework/IAddon.aidl
  */
 package org.tint.addons.framework;
 /**
