@@ -16,6 +16,32 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
-parcelable Action;
+import android.os.Parcel;
+
+public abstract class BaseAskUserAction extends Action {
+
+	protected int mId;
+	
+	protected BaseAskUserAction(int action, int id) {
+		super(action);		
+		mId = id;
+	}
+	
+	protected BaseAskUserAction(Parcel in, int action) {
+		super(action);
+		mId = in.readInt();
+	}
+	
+	public int getId() {
+		return mId;
+	}
+	
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		super.writeToParcel(dest, flags);		
+		dest.writeInt(mId);
+	}
+
+}

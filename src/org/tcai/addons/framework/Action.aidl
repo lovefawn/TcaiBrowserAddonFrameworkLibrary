@@ -16,23 +16,6 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
-public class Callbacks {
-	
-	public static final int PAGE_STARTED = 1;
-	public static final int PAGE_FINISHED = 2;
-	
-	public static final int TAB_OPENED = 4;
-	public static final int TAB_CLOSED = 8;
-	public static final int TAB_SWITCHED = 16;
-	
-	public static final int HAS_SETTINGS_PAGE = 32;
-	
-	public static final int CONTRIBUTE_MAIN_MENU = 64;
-	public static final int CONTRIBUTE_LINK_CONTEXT_MENU = 128;
-	public static final int CONTRIBUTE_HISTORY_BOOKMARKS_MENU = 256;
-	public static final int CONTRIBUTE_BOOKMARK_CONTEXT_MENU = 512;
-	public static final int CONTRIBUTE_HISTORY_CONTEXT_MENU = 1024;
-
-}
+parcelable Action;

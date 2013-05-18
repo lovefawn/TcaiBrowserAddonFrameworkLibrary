@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
 import android.os.Parcel;
 import android.os.Parcelable;

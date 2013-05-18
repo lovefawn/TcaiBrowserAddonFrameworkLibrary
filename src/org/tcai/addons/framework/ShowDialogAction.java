@@ -16,32 +16,43 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
 import android.os.Parcel;
 
-public abstract class BaseAskUserAction extends Action {
+public class ShowDialogAction extends Action {
+	
+	private String mTitle;
+	private String mMessage;
+	
+	public ShowDialogAction(String title, String message) {
+		super(ACTION_SHOW_DIALOG);
+		
+		mTitle = title;
+		mMessage = message;
+	}
+	
+	public ShowDialogAction(Parcel in) {
+		super(ACTION_SHOW_DIALOG);
+		
+		mTitle = in.readString();
+		mMessage = in.readString();
+	}
 
-	protected int mId;
-	
-	protected BaseAskUserAction(int action, int id) {
-		super(action);		
-		mId = id;
+	public String getTitle() {
+		return mTitle;
 	}
 	
-	protected BaseAskUserAction(Parcel in, int action) {
-		super(action);
-		mId = in.readInt();
-	}
-	
-	public int getId() {
-		return mId;
+	public String getMessage() {
+		return mMessage;
 	}
 	
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		super.writeToParcel(dest, flags);		
-		dest.writeInt(mId);
+		super.writeToParcel(dest, flags);
+		
+		dest.writeString(mTitle);
+		dest.writeString(mMessage);
 	}
 
 }

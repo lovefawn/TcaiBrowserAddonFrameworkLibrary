@@ -16,43 +16,23 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
-import android.os.Parcel;
-
-public class ShowDialogAction extends Action {
+public class Callbacks {
 	
-	private String mTitle;
-	private String mMessage;
+	public static final int PAGE_STARTED = 1;
+	public static final int PAGE_FINISHED = 2;
 	
-	public ShowDialogAction(String title, String message) {
-		super(ACTION_SHOW_DIALOG);
-		
-		mTitle = title;
-		mMessage = message;
-	}
+	public static final int TAB_OPENED = 4;
+	public static final int TAB_CLOSED = 8;
+	public static final int TAB_SWITCHED = 16;
 	
-	public ShowDialogAction(Parcel in) {
-		super(ACTION_SHOW_DIALOG);
-		
-		mTitle = in.readString();
-		mMessage = in.readString();
-	}
-
-	public String getTitle() {
-		return mTitle;
-	}
+	public static final int HAS_SETTINGS_PAGE = 32;
 	
-	public String getMessage() {
-		return mMessage;
-	}
-	
-	@Override
-	public void writeToParcel(Parcel dest, int flags) {
-		super.writeToParcel(dest, flags);
-		
-		dest.writeString(mTitle);
-		dest.writeString(mMessage);
-	}
+	public static final int CONTRIBUTE_MAIN_MENU = 64;
+	public static final int CONTRIBUTE_LINK_CONTEXT_MENU = 128;
+	public static final int CONTRIBUTE_HISTORY_BOOKMARKS_MENU = 256;
+	public static final int CONTRIBUTE_BOOKMARK_CONTEXT_MENU = 512;
+	public static final int CONTRIBUTE_HISTORY_CONTEXT_MENU = 1024;
 
 }

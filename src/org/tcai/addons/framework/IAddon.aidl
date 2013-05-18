@@ -16,9 +16,9 @@
  * limitations under the License.
  */
 
-package org.tint.addons.framework;
+package org.tcai.addons.framework;
 
-import org.tint.addons.framework.Action;
+import org.tcai.addons.framework.Action;
 
 /**
  * AIDL interface for an addon service.
